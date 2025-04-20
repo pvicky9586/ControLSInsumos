@@ -28,5 +28,16 @@ namespace ControLSInsumos
             Despachar FormDespachar = new Despachar();
             FormDespachar.ShowDialog();
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            Inventario FormInventario = new Inventario();
+            FormInventario.ShowDialog();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

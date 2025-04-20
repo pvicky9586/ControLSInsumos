@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
 
 namespace ControLSInsumos
 {
@@ -95,19 +96,24 @@ namespace ControLSInsumos
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             string codigo = textBox2.Text;
+            var resp = MessageBox.Show("¿Estas seguro que deseas eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo);
+            if (resp == DialogResult.Yes)
+            {
+                SqlConnection Conexion = conexionDB.ObtenerConexion();
+                SqlCommand Comando = new SqlCommand(string.Format("DELETE FROM insumos WHERE CODIGO='" + textBox2.Text + "' "), Conexion);
 
-            SqlConnection Conexion = conexionDB.ObtenerConexion();
-            SqlCommand Comando = new SqlCommand(string.Format("DELETE FROM insumos WHERE CODIGO='" + textBox2.Text + "' "), Conexion);
-            int Resultado = Comando.ExecuteNonQuery();
-            Conexion.Close();
-            if (Resultado > 0)
-            {
-                this.insumosTableAdapter.Fill(this.dBInsumosDataSet.insumos);
-                limpiar();
-            }
-            else
-            {
-                MessageBox.Show("No se pudo Guardar los cambios!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                int Resultado = Comando.ExecuteNonQuery();
+                Conexion.Close();
+                if (Resultado > 0)
+                {
+
+                    this.insumosTableAdapter.Fill(this.dBInsumosDataSet.insumos);
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo Guardar los cambios!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -167,6 +173,11 @@ namespace ControLSInsumos
            int Resultado = Comando.ExecuteNonQuery();
            Conexion.Close();
            limpiar();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
