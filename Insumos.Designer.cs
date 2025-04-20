@@ -37,13 +37,10 @@
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insumosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBInsumosDataSet = new ControLSInsumos.DBInsumosDataSet();
-            this.insumosTableAdapter = new ControLSInsumos.DBInsumosDataSetTableAdapters.insumosTableAdapter();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,12 +52,21 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.insumosTableAdapter = new ControLSInsumos.DBInsumosDataSetTableAdapters.insumosTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insumosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -128,10 +134,6 @@
             this.dBInsumosDataSet.DataSetName = "DBInsumosDataSet";
             this.dBInsumosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // insumosTableAdapter
-            // 
-            this.insumosTableAdapter.ClearBeforeFill = true;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -152,6 +154,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(116, 41);
             this.textBox5.TabIndex = 47;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -175,28 +178,6 @@
             this.btnCargar.Text = "Cargar Insumos";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::ControLSInsumos.Properties.Resources.CT;
-            this.button3.Location = new System.Drawing.Point(699, 337);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 44);
-            this.button3.TabIndex = 51;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::ControLSInsumos.Properties.Resources.searh3;
-            this.btnbuscar.Location = new System.Drawing.Point(587, 80);
-            this.btnbuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(51, 43);
-            this.btnbuscar.TabIndex = 48;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // label13
             // 
@@ -260,7 +241,7 @@
             this.textBox2.AcceptsReturn = true;
             this.textBox2.BackColor = System.Drawing.Color.LightBlue;
             this.textBox2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.textBox2.Location = new System.Drawing.Point(83, 174);
+            this.textBox2.Location = new System.Drawing.Point(83, 171);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 21);
@@ -268,11 +249,12 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 202);
+            this.textBox3.Location = new System.Drawing.Point(81, 204);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 21);
             this.textBox3.TabIndex = 37;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // btnNuevo
             // 
@@ -312,25 +294,100 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(18, 178);
+            this.label9.Location = new System.Drawing.Point(18, 174);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 13);
             this.label9.TabIndex = 42;
             this.label9.Text = "Código";
             // 
-            // btnClear
+            // label15
             // 
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.Image = global::ControLSInsumos.Properties.Resources.clear;
-            this.btnClear.Location = new System.Drawing.Point(113, 337);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(88, 44);
-            this.btnClear.TabIndex = 41;
-            this.btnClear.Text = "Limpiar form.";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(81, 192);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(119, 9);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "Este valor no puede ser modicado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(348, 383);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 15);
+            this.label1.TabIndex = 53;
+            // 
+            // insumosTableAdapter
+            // 
+            this.insumosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(78, 224);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 9);
+            this.label2.TabIndex = 54;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(13, 385);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(22, 384);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 15);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "...";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ControLSInsumos.Properties.Resources.form;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 263);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::ControLSInsumos.Properties.Resources.CT;
+            this.button3.Location = new System.Drawing.Point(699, 337);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 44);
+            this.button3.TabIndex = 51;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Image = global::ControLSInsumos.Properties.Resources.searh3;
+            this.btnbuscar.Location = new System.Drawing.Point(587, 80);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(51, 43);
+            this.btnbuscar.TabIndex = 48;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnBorrar
             // 
@@ -347,17 +404,18 @@
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // label15
+            // btnClear
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(57, 225);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 9);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Este valor no puede ser modicado";
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Image = global::ControLSInsumos.Properties.Resources.clear;
+            this.btnClear.Location = new System.Drawing.Point(113, 337);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(88, 44);
+            this.btnClear.TabIndex = 41;
+            this.btnClear.Text = "Limpiar form.";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Insumos
             // 
@@ -365,6 +423,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(749, 404);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
@@ -386,6 +448,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -395,6 +458,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insumosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,5 +493,10 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

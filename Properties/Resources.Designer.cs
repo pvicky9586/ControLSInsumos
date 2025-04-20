@@ -123,6 +123,16 @@ namespace ControLSInsumos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap form {
+            get {
+                object obj = ResourceManager.GetObject("form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maintenance_245 {
             get {
                 object obj = ResourceManager.GetObject("maintenance_245", resourceCulture);

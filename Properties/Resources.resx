@@ -118,20 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DESP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\DESP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DESP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\DESP2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soli" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\soli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soliBTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\soliBTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="control_panel_15486" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\control_panel_15486.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DESP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\DESP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maintenance_245" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\maintenance_245.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searh3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\searh3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\soli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\CT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +148,13 @@
   <data name="Sin título-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Sin título-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="searh3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\searh3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soliBTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\soliBTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maintenance_245" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\maintenance_245.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
