@@ -31,6 +31,7 @@
                               <Value>NOMBRE</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>MidnightBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -65,6 +66,7 @@
                               <Value>CODIGO</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>MidnightBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -99,6 +101,7 @@
                               <Value>CANTIDAD</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>MidnightBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -112,6 +115,7 @@
                               <Value>Existente</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>MidnightBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -257,7 +261,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.90183cm</Top>
+        <Top>1.26683cm</Top>
         <Left>1.37266cm</Left>
         <Height>1.62333cm</Height>
         <Width>7.5cm</Width>
@@ -296,6 +300,7 @@
                               <Value>CODIGO</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -330,6 +335,7 @@
                               <Value>CANTIDAD</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -364,6 +370,7 @@
                               <Value>FECHA</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -404,7 +411,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CODIGO1</rd:DefaultName>
@@ -434,7 +443,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CANTIDAD1</rd:DefaultName>
@@ -464,7 +475,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FECHA</rd:DefaultName>
@@ -503,7 +516,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>1.37266cm</Top>
+        <Top>1.30916cm</Top>
         <Left>10.95058cm</Left>
         <Height>1.2cm</Height>
         <Width>7.5cm</Width>
@@ -583,7 +596,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.47642in</Height>
+    <Height>2.85142in</Height>
     <Style />
   </Body>
   <Width>7.43281in</Width>
@@ -597,10 +610,10 @@
           <Source>Embedded</Source>
           <Value>soli</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.65828cm</Top>
-          <Left>15.795cm</Left>
-          <Height>2.41405cm</Height>
-          <Width>2.76682cm</Width>
+          <Top>0.28786cm</Top>
+          <Left>14.78958cm</Left>
+          <Height>2.92558cm</Height>
+          <Width>3.77224cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -617,7 +630,7 @@
                   <Value>Inventario</Value>
                   <Style>
                     <FontFamily>Berlin Sans FB</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>18pt</FontSize>
                     <TextDecoration>Underline</TextDecoration>
                   </Style>
                 </TextRun>
@@ -626,10 +639,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.65828cm</Top>
-          <Left>3.87266cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Top>0.02328cm</Top>
+          <Left>0.80349cm</Left>
+          <Height>1.18208cm</Height>
+          <Width>3.98167cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -648,21 +661,38 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Dpto. de Matenimiento y Servicios Generales</Value>
+                  <Value>Dpto. de Matenimiento y </Value>
                   <Style>
                     <FontFamily>Calibri</FontFamily>
-                    <FontSize>22pt</FontSize>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Servicios Generales</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>24pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>1.69016cm</Top>
+          <Top>1.05516cm</Top>
           <Left>0.635cm</Left>
-          <Height>1.34083cm</Height>
+          <Height>2.01717cm</Height>
           <Width>14.8425cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -675,6 +705,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line1">
+          <Top>3.31927cm</Top>
+          <Height>0cm</Height>
+          <Width>18.87934cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -683,7 +724,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.97646cm</Height>
+      <Height>2.87604cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -695,17 +736,19 @@
               <TextRuns>
                 <TextRun>
                   <Value>Todos los derechos reservador</Value>
-                  <Style />
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
-                <TextAlign>Right</TextAlign>
+                <TextAlign>Center</TextAlign>
               </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Top>1.00604cm</Top>
-          <Left>11.32099cm</Left>
+          <Top>0.37104cm</Top>
+          <Left>11.63849cm</Left>
           <Height>0.6cm</Height>
           <Width>7.15667cm</Width>
           <Style>

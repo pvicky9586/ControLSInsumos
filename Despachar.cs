@@ -37,9 +37,15 @@ namespace ControLSInsumos
             textBox3.Text = dataGridView1.SelectedCells[1].Value.ToString();  // codigo
             int leer = int.Parse(textBox2.Text);
             //debo idicar la cantidad disponible y marcar stop
+
+            label7.Text = ""; //despacho procesado
             if (leer <= 5)
             {
-                textBox2.BackColor = Color.Yellow;
+                textBox2.BackColor = Color.Yellow;  label5.BackColor = Color.Yellow;
+            }
+            else
+            {
+                textBox2.BackColor = Color.White; 
             }
         }
 
@@ -92,7 +98,7 @@ namespace ControLSInsumos
             textBox5.Text = ""; //buscar
             textBox3.Text = "";  // codigo
             label7.Text = ""; //texto 'despacho procesado'
-            textBox2.BackColor = Color.White;
+            textBox2.BackColor = Color.White; label5.ForeColor= Color.Black;
         }
 
  
@@ -118,7 +124,7 @@ namespace ControLSInsumos
         }
 
         // ACTUALIZAR
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //actualizar
         {
             string codigo = textBox5.Text;
             SqlConnection Conexion = conexionDB.ObtenerConexion();

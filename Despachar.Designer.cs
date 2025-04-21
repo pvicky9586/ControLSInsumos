@@ -82,7 +82,7 @@
             this.descripcionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.insumosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 136);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -164,7 +164,7 @@
             // 
             this.btnbuscar.Image = global::ControLSInsumos.Properties.Resources.searh3;
             this.btnbuscar.Location = new System.Drawing.Point(370, 87);
-            this.btnbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(59, 42);
             this.btnbuscar.TabIndex = 53;
@@ -175,7 +175,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox5.Location = new System.Drawing.Point(222, 89);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(132, 41);
@@ -198,7 +198,7 @@
             this.btnDar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDar.Font = new System.Drawing.Font("Goudy Old Style", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDar.Location = new System.Drawing.Point(6, 174);
-            this.btnDar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDar.Margin = new System.Windows.Forms.Padding(4);
             this.btnDar.Name = "btnDar";
             this.btnDar.Size = new System.Drawing.Size(254, 59);
             this.btnDar.TabIndex = 2;
@@ -209,7 +209,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(154, 119);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(39, 21);
             this.textBox1.TabIndex = 4;
@@ -252,7 +252,7 @@
             this.DateTimePinker.CustomFormat = "dd/MM/yyyy";
             this.DateTimePinker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePinker.Location = new System.Drawing.Point(99, 147);
-            this.DateTimePinker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DateTimePinker.Margin = new System.Windows.Forms.Padding(4);
             this.DateTimePinker.Name = "DateTimePinker";
             this.DateTimePinker.Size = new System.Drawing.Size(144, 21);
             this.DateTimePinker.TabIndex = 26;
@@ -261,7 +261,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 121);
+            this.label10.Location = new System.Drawing.Point(14, 121);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 15);
@@ -283,9 +283,9 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnDar);
             this.groupBox1.Location = new System.Drawing.Point(547, 136);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(272, 243);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
@@ -293,7 +293,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(114, 69);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(79, 21);
             this.textBox3.TabIndex = 60;
@@ -301,7 +301,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(154, 95);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(39, 21);
             this.textBox2.TabIndex = 59;
@@ -330,7 +330,7 @@
             // 
             this.button3.Image = global::ControLSInsumos.Properties.Resources.CT;
             this.button3.Location = new System.Drawing.Point(480, 380);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(48, 38);
             this.button3.TabIndex = 56;
@@ -345,7 +345,7 @@
             this.label7.Location = new System.Drawing.Point(580, 391);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 16);
+            this.label7.Size = new System.Drawing.Size(23, 16);
             this.label7.TabIndex = 57;
             this.label7.Text = "....";
             // 
@@ -366,7 +366,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Despachar";
             this.Text = "Despachar";
             this.Load += new System.EventHandler(this.Despachar_Load);

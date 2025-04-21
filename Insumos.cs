@@ -27,56 +27,77 @@ namespace ControLSInsumos
 //-----------NUEVO---------------
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            string codigo = textBox2.Text;
-            int cantidad = int.Parse(textBox3.Text);
+            string codigo = textBox2.Text;           
             SqlConnection Conexion = conexionDB.ObtenerConexion();
-            
-            string cadena = "SELECT codigo FROM insumos  WHERE codigo='" + codigo + "'";
-            SqlCommand coman = new SqlCommand(cadena, Conexion);
-            SqlDataReader registro = coman.ExecuteReader();
-            if (registro.Read())
+            try
             {
-                MessageBox.Show("Insumo ya registrado");
-                limpiar();
-            }
-            else
-            {
-                registro.Close();
-                SqlCommand Comando = new SqlCommand(string.Format("insert Into insumos(NOMBRE, CODIGO, CANTIDAD, DESCRIPCION) values('{0}','{1}','{2}','{3}')", textBox1.Text, textBox2.Text, cantidad, textBox4.Text), Conexion);
-                int Resultado = Comando.ExecuteNonQuery();
-                Conexion.Close();
-                if (Resultado > 0)
+                int cantidad = int.Parse(textBox3.Text);
+                string cadena = "SELECT codigo FROM insumos  WHERE codigo='" + codigo + "'";
+                SqlCommand cmdN = new SqlCommand(cadena, Conexion);
+                SqlDataReader registroN = cmdN.ExecuteReader();
+                if (registroN.Read())
                 {
-                    label1.Text = "Insumo guardado";
-                    //MessageBox.Show("Datos Guardados Correctamente!!", "Guardados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    MessageBox.Show("Insumo ya registrado");
+                    limpiar();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo Guardar!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    registroN.Close();
+                    SqlCommand ComandoN = new SqlCommand(string.Format("insert Into insumos(NOMBRE, CODIGO, CANTIDAD, DESCRIPCION) values('{0}','{1}','{2}','{3}')", textBox1.Text, textBox2.Text, cantidad, textBox4.Text), Conexion);
+                    int ResultadoN = ComandoN.ExecuteNonQuery();
+                    if (ResultadoN > 0)
+                    {
+                        label1.Text = "Insumo guardado";
+                        //MessageBox.Show("Datos Guardados Correctamente!!", "Guardados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo Guardar!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
-            limpiar();
+            catch (Exception eN)
+            {
+                MessageBox.Show(eN.Message);
+            }
+            finally
+            {
+
+                Conexion.Close();
+                limpiar();
+            }
+         
         }
-// ------------MODIFICAR -------------------
+        // ------------MODIFICAR -------------------
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string codigo = textBox2.Text;
-            int cantidad = int.Parse(textBox3.Text);
-
             SqlConnection Conexion = conexionDB.ObtenerConexion();
-            SqlCommand Comando = new SqlCommand(string.Format("UPDATE insumos SET NOMBRE='" + textBox1.Text + "', CANTIDAD='" + cantidad + "', descripcion ='" + textBox4.Text + "' WHERE CODIGO='" + textBox2.Text + "' "), Conexion);
-            int Resultado = Comando.ExecuteNonQuery();
-            Conexion.Close();
-            if (Resultado > 0)
+            try
             {
-                //MessageBox.Show("Datos Guardados Correctamente!!", "Guardados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int cantidad = int.Parse(textBox3.Text);
+                SqlCommand CmdMod = new SqlCommand(string.Format("UPDATE insumos SET NOMBRE='" + textBox1.Text + "', CANTIDAD='" + cantidad + "', descripcion ='" + textBox4.Text + "' WHERE CODIGO='" + textBox2.Text + "' "), Conexion);
+                int ResultadoM = CmdMod.ExecuteNonQuery();
+                if (ResultadoM > 0)
+                {
+                    //MessageBox.Show("Datos Guardados Correctamente!!", "Guardados!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo Guardar los cambios!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
             }
-            else
+            catch (Exception em)
             {
-                MessageBox.Show("No se pudo Guardar los cambios!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(em.Message);
+            }
+            finally
+            {
+                Conexion.Close();
+                limpiar();
             }
         }
 
@@ -84,24 +105,26 @@ namespace ControLSInsumos
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             string codigo = textBox2.Text;
-            var resp = MessageBox.Show("¿Estas seguro que deseas eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo);
-            if (resp == DialogResult.Yes)
-            {
+            //var resp = MessageBox.Show("¿Estas seguro que deseas eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo);
+            //if (resp == DialogResult.Yes)
+            //{
+
+            // D --> de delete
                 SqlConnection Conexion = conexionDB.ObtenerConexion();
                 string cadena = "SELECT CODIGO FROM despachosProc  WHERE CODIGO='" + codigo + "'";
-                SqlCommand coman = new SqlCommand(cadena, Conexion);
-                SqlDataReader registro = coman.ExecuteReader();
-                if (registro.Read())
+                SqlCommand comandoD = new SqlCommand(cadena, Conexion);
+                SqlDataReader registroD = comandoD.ExecuteReader();
+                if (registroD.Read())
                 {
                     label4.Text = "Este Insumo no puede eliminarse";
                 }
                 else
                 {
-                    registro.Close();
-                    SqlCommand Comando = new SqlCommand(string.Format("DELETE FROM insumos WHERE CODIGO='" + codigo + "' "), Conexion);
-                    int Resultado = Comando.ExecuteNonQuery();
+                    registroD.Close();
+                    SqlCommand CmdD = new SqlCommand(string.Format("DELETE FROM insumos WHERE CODIGO='" + codigo + "' "), Conexion);
+                    int ResultadoD = CmdD.ExecuteNonQuery();
                     Conexion.Close();
-                    if (Resultado > 0)
+                    if (ResultadoD > 0)
                     {
                         this.insumosTableAdapter.Fill(this.dBInsumosDataSet.insumos);
                         limpiar();
@@ -113,12 +136,13 @@ namespace ControLSInsumos
 
                 }
               
-            }
+           // }
         }
 
  // ---------- CARGAR INSUMOS ---------
         private void btnCargar_Click(object sender, EventArgs e)
         {
+
             SqlConnection Conexion = conexionDB.ObtenerConexion();
             SqlCommand Comando = new SqlCommand(string.Format("insert Into insumos(NOMBRE, CODIGO, CANTIDAD, DESCRIPCION) " +
                 "values('CEPILLO', 'CEP -01', 10, 'CUALQUIER COSA'), ('DETERGENTE','DET-02',20,'EN LIQUIDO'),('BOLSAS NEGRAS','BOL-03',25,'DE 5K C/U')"), Conexion);
@@ -135,15 +159,6 @@ namespace ControLSInsumos
 
             //    MessageBox.Show(suma.ToString());
             //};
-
-            btnCargar.Click += (o, ev) =>
-            {
-                int a = 10;
-                int b = 20;
-                int suma = a + b;
-
-                MessageBox.Show(suma.ToString());
-            };
         }
 
  // ----- BUSCAR -----------
@@ -176,7 +191,8 @@ namespace ControLSInsumos
             textBox3.Text = dataGridView1.SelectedCells[2].Value.ToString(); //cantidad
             textBox4.Text = dataGridView1.SelectedCells[3].Value.ToString(); //descripcion
             btnNuevo.Enabled = false;
-            textBox2.Enabled = false; 
+            textBox2.Enabled = false;
+            label4.Text = "";
         }
         public void limpiar()
         {
