@@ -59,11 +59,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insumosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -81,15 +83,16 @@
             this.cANTIDADDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.insumosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 136);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 136);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(512, 265);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -98,24 +101,28 @@
             this.nOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE";
             this.nOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
             this.nOMBREDataGridViewTextBoxColumn.Name = "nOMBREDataGridViewTextBoxColumn";
+            this.nOMBREDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cODIGODataGridViewTextBoxColumn
             // 
             this.cODIGODataGridViewTextBoxColumn.DataPropertyName = "CODIGO";
             this.cODIGODataGridViewTextBoxColumn.HeaderText = "CODIGO";
             this.cODIGODataGridViewTextBoxColumn.Name = "cODIGODataGridViewTextBoxColumn";
+            this.cODIGODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cANTIDADDataGridViewTextBoxColumn
             // 
             this.cANTIDADDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD";
             this.cANTIDADDataGridViewTextBoxColumn.HeaderText = "CANTIDAD";
             this.cANTIDADDataGridViewTextBoxColumn.Name = "cANTIDADDataGridViewTextBoxColumn";
+            this.cANTIDADDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descripcionDataGridViewTextBoxColumn
             // 
             this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // insumosBindingSource
             // 
@@ -163,7 +170,7 @@
             // btnbuscar
             // 
             this.btnbuscar.Image = global::ControLSInsumos.Properties.Resources.searh3;
-            this.btnbuscar.Location = new System.Drawing.Point(370, 87);
+            this.btnbuscar.Location = new System.Drawing.Point(306, 94);
             this.btnbuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(59, 42);
@@ -174,7 +181,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox5.Location = new System.Drawing.Point(222, 89);
+            this.textBox5.Location = new System.Drawing.Point(166, 93);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -197,7 +204,7 @@
             this.btnDar.BackColor = System.Drawing.Color.Teal;
             this.btnDar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDar.Font = new System.Drawing.Font("Goudy Old Style", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDar.Location = new System.Drawing.Point(6, 174);
+            this.btnDar.Location = new System.Drawing.Point(6, 181);
             this.btnDar.Margin = new System.Windows.Forms.Padding(4);
             this.btnDar.Name = "btnDar";
             this.btnDar.Size = new System.Drawing.Size(254, 59);
@@ -253,6 +260,7 @@
             this.DateTimePinker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePinker.Location = new System.Drawing.Point(99, 147);
             this.DateTimePinker.Margin = new System.Windows.Forms.Padding(4);
+            this.DateTimePinker.MinDate = new System.DateTime(2020, 2, 2, 0, 0, 0, 0);
             this.DateTimePinker.Name = "DateTimePinker";
             this.DateTimePinker.Size = new System.Drawing.Size(144, 21);
             this.DateTimePinker.TabIndex = 26;
@@ -329,7 +337,7 @@
             // button3
             // 
             this.button3.Image = global::ControLSInsumos.Properties.Resources.CT;
-            this.button3.Location = new System.Drawing.Point(480, 380);
+            this.button3.Location = new System.Drawing.Point(453, 98);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(48, 38);
@@ -341,20 +349,29 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label7.Location = new System.Drawing.Point(580, 391);
+            this.label7.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label7.Location = new System.Drawing.Point(580, 379);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(23, 16);
             this.label7.TabIndex = 57;
             this.label7.Text = "....";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ControLSInsumos.Properties.Resources.soliBTN;
+            this.pictureBox1.Location = new System.Drawing.Point(497, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(368, 448);
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
             // Despachar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(832, 421);
+            this.ClientSize = new System.Drawing.Size(832, 403);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
@@ -364,9 +381,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Despachar";
             this.Text = "Despachar";
             this.Load += new System.EventHandler(this.Despachar_Load);
@@ -376,6 +396,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +433,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

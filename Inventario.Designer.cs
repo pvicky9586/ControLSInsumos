@@ -31,17 +31,18 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.insumosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBInsumosDataSet1 = new ControLSInsumos.DBInsumosDataSet1();
+            this.despachosProcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.despachosProceDataSet2 = new ControLSInsumos.despachosProceDataSet2();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.insumosTableAdapter = new ControLSInsumos.DBInsumosDataSet1TableAdapters.insumosTableAdapter();
-            this.despachosProceDataSet2 = new ControLSInsumos.despachosProceDataSet2();
-            this.despachosProcBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.despachosProcTableAdapter = new ControLSInsumos.despachosProceDataSet2TableAdapters.despachosProcTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.insumosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.despachosProceDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.despachosProcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.despachosProceDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // insumosBindingSource
@@ -53,6 +54,16 @@
             // 
             this.dBInsumosDataSet1.DataSetName = "DBInsumosDataSet1";
             this.dBInsumosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // despachosProcBindingSource
+            // 
+            this.despachosProcBindingSource.DataMember = "despachosProc";
+            this.despachosProcBindingSource.DataSource = this.despachosProceDataSet2;
+            // 
+            // despachosProceDataSet2
+            // 
+            this.despachosProceDataSet2.DataSetName = "despachosProceDataSet2";
+            this.despachosProceDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -74,16 +85,6 @@
             // 
             this.insumosTableAdapter.ClearBeforeFill = true;
             // 
-            // despachosProceDataSet2
-            // 
-            this.despachosProceDataSet2.DataSetName = "despachosProceDataSet2";
-            this.despachosProceDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // despachosProcBindingSource
-            // 
-            this.despachosProcBindingSource.DataMember = "despachosProc";
-            this.despachosProcBindingSource.DataSource = this.despachosProceDataSet2;
-            // 
             // despachosProcTableAdapter
             // 
             this.despachosProcTableAdapter.ClearBeforeFill = true;
@@ -94,13 +95,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Inventario";
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.insumosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBInsumosDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.despachosProceDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.despachosProcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.despachosProceDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

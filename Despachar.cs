@@ -51,42 +51,50 @@ namespace ControLSInsumos
 
         private void btnDar_Click(object sender, EventArgs e)
         {
-            string codigo = textBox3.Text;
-            int cantDesp= int.Parse(textBox1.Text);
-            int cantDisp = int.Parse(textBox2.Text);
-            int cantRest = cantDisp - cantDesp;
-            DateTime DT = DateTimePinker.Value;
-            string fecha = DT.ToString("dd/MM/yyyy");
-           
-            if (cantDisp < cantDesp)
+         
+            try
             {
-                MessageBox.Show("la cantidad solicitata no esta disponible");
-                textBox1.Text = ""; // cantidad a solicitar
-            }
-            else 
-            {
-                SqlConnection Cone = conexionDB.ObtenerConexion();
-                SqlCommand Com = new SqlCommand(string.Format("insert Into despachosProc(CODIGO, CANTIDAD, FECHA) values('" + codigo + "', '" + cantRest + "','" + fecha + "')"), Cone);
-                int Resulta = Com.ExecuteNonQuery();
-                Cone.Close();
-                if (Resulta > 0)
-                {
-                    // actualiza tabla de insumos
-                    SqlConnection Conex = conexionDB.ObtenerConexion();
-                    SqlCommand Cmd = new SqlCommand(string.Format("UPDATE insumos SET CANTIDAD='" + cantRest + "' WHERE CODIGO = '" + codigo + "' "), Conex);
-                    int Resul = Cmd.ExecuteNonQuery();
-                    Conex.Close();
+                string codigo = textBox3.Text;
+                int cantDesp = int.Parse(textBox1.Text);
+                int cantDisp = int.Parse(textBox2.Text);
+                int cantRest = cantDisp - cantDesp;
+                DateTime DT = DateTimePinker.Value;
+                string fecha = DT.ToString("dd/MM/yyyy");
 
-                    limpiar();
-                    label7.Text = "Despacho procesado...";
-                    this.insumosTableAdapter.Fill(this.dBInsumosDataSet.insumos);
+                if (cantDisp < cantDesp)
+                {
+                    MessageBox.Show("la cantidad solicitata no esta disponible");
+                    textBox1.Text = ""; // cantidad a solicitar
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo Guardar!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    SqlConnection Cone = conexionDB.ObtenerConexion();
+                    SqlCommand Com = new SqlCommand(string.Format("insert Into despachosProc(CODIGO, CANTIDAD, FECHA) values('" + codigo + "', '" + cantRest + "','" + fecha + "')"), Cone);
+                    int Resulta = Com.ExecuteNonQuery();
+                    Cone.Close();
+                    if (Resulta > 0)
+                    {
+                        // actualiza tabla de insumos
+                        SqlConnection Conex = conexionDB.ObtenerConexion();
+                        SqlCommand Cmd = new SqlCommand(string.Format("UPDATE insumos SET CANTIDAD='" + cantRest + "' WHERE CODIGO = '" + codigo + "' "), Conex);
+                        int Resul = Cmd.ExecuteNonQuery();
+                        Conex.Close();
+
+                        limpiar();
+                        label7.Text = "Despacho procesado...";
+                        this.insumosTableAdapter.Fill(this.dBInsumosDataSet.insumos);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo Guardar!!", "Error al Guardar!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
-
+            catch(Exception dar)
+            {
+                MessageBox.Show(dar.Message);
+            }
+         
 
         }
         public void limpiar()

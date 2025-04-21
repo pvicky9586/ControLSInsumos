@@ -39,5 +39,15 @@ namespace ControLSInsumos
         {
 
         }
+
+        private void btnInsumos_MouseHover(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

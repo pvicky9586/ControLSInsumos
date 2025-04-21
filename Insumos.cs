@@ -104,12 +104,13 @@ namespace ControLSInsumos
 // ---------- BORRAR------------
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            string codigo = textBox2.Text;
-            //var resp = MessageBox.Show("¿Estas seguro que deseas eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo);
-            //if (resp == DialogResult.Yes)
-            //{
-
-            // D --> de delete
+            
+             //var resp = MessageBox.Show("¿Estas seguro que deseas eliminar este registro?", "Confirmacion", MessageBoxButtons.YesNo);
+             //if (resp == DialogResult.Yes)
+              try
+              {
+                 string codigo = textBox2.Text;
+                // D --> de delete
                 SqlConnection Conexion = conexionDB.ObtenerConexion();
                 string cadena = "SELECT CODIGO FROM despachosProc  WHERE CODIGO='" + codigo + "'";
                 SqlCommand comandoD = new SqlCommand(cadena, Conexion);
@@ -135,8 +136,11 @@ namespace ControLSInsumos
                     }
 
                 }
-              
-           // }
+              }
+              catch (Exception ex)
+              {
+                  MessageBox.Show(ex.Message);
+              }
         }
 
  // ---------- CARGAR INSUMOS ---------
