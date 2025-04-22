@@ -220,6 +220,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(39, 21);
             this.textBox1.TabIndex = 4;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // lbnombre
             // 
@@ -353,7 +354,7 @@
             this.label7.Location = new System.Drawing.Point(580, 379);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 16);
+            this.label7.Size = new System.Drawing.Size(27, 16);
             this.label7.TabIndex = 57;
             this.label7.Text = "....";
             // 

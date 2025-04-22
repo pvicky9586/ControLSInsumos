@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBInsumosDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBInsumosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBInsumosDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Despachar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +189,17 @@
     </None>
     <None Include="DBInsumosDataSet1.xss">
       <DependentUpon>DBInsumosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBInsumosDataSet2.xsc">
+      <DependentUpon>DBInsumosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBInsumosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBInsumosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBInsumosDataSet2.xss">
+      <DependentUpon>DBInsumosDataSet2.xsd</DependentUpon>
     </None>
     <None Include="despachosProceDataSet2.xsc">
       <DependentUpon>despachosProceDataSet2.xsd</DependentUpon>

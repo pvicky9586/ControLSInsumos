@@ -260,5 +260,10 @@ namespace ControLSInsumos
                 label2.Text = "Solo Numeros";
             }
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
