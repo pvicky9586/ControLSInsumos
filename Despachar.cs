@@ -69,7 +69,7 @@ namespace ControLSInsumos
                 else
                 {
                     SqlConnection Cone = conexionDB.ObtenerConexion();
-                    SqlCommand Com = new SqlCommand(string.Format("insert Into despachosProc(CODIGO, CANTIDAD, FECHA) values('" + codigo + "', '" + cantRest + "','" + fecha + "')"), Cone);
+                    SqlCommand Com = new SqlCommand(string.Format("insert Into despachosProc(CODIGO, CANTIDAD, FECHA) values('" + codigo + "', '" + cantDesp + "','" + fecha + "')"), Cone);
                     int Resulta = Com.ExecuteNonQuery();
                     Cone.Close();
                     if (Resulta > 0)
